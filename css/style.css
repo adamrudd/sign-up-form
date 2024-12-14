@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    width: 25vw;
+    height: 100vw;
+    background-image: url("./img/freepik-graphene3a.jpg");
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
