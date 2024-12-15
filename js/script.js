@@ -1,3 +1,11 @@
+const username = document.querySelector("#first_name")
+const greetMeButton = document.querySelector(".greet-btn")
+const greetingOutput = document.querySelector(".greeting")
+
+greetMeButton.addEventListener('click', (event) => {
+   greetingOutput.innerText = `Hello ${username.value}`;
+})
+
 const form = document.querySelector("form");
 const email = document.getElementById("mail");
 const emailError = document.querySelector("#mail + span.error");

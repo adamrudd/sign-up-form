@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="./js/script.js"></script>
 
     <title>Sign-up form</title>
@@ -13,48 +13,65 @@
         <aside class="sidebar">
           <div class="banner">
             <div class="icon">
-              <img src="./img/linux.svg" alt="Graphene-products logo" width="auto" height="100px">
+              <img src="./img/linux.svg" alt="graphene products logo" width="auto" height="100px">
             </div>
             <div class="logo">
-              <p>GRAPHENE-PRODUCTS</p>
+              <h3>graphene-products.com</h3>
             </div>
           </div>
         </aside>
         <!-- main.content>div.text(p)+form:post.inputs+form.buttons -->
         <main class="content">
-            <div class="calltoaction"></div>
-            <p></p>
+            <div class="calltoaction"><p></p></div>
             <div class="signupform">
-                <form action="#" method="post">
-                  <h3>Create your account.</h3>
-                  <div id="input_name">
+              <form action="https://httpbin.org/post" class="form" id="sign_up" method="post">
+                <h3>Create your account.</h3>
+                <p id="blank_line">space</p>
+                <div class="names">
+                  <div id="input_first">
                     <label for="first_name">First Name:</label>
-                    <input type="text" class="name_input" required />
+                    <input type="text" id="first_name" name="first_name" placeholder="First" required autocomplete="off">
                   </div>
-                  <div id="input_last_name">
+                  <div id="input_last">
                     <label for="last_name">Last Name:</label>
-                    <input type="text" class="last_name_input" required />
+                    <input type="text" id="last_name" name="last_name" placeholder="Last" required>
                   </div>
+                </div>
+                <div class="contacts">
                   <div id="input_email">
-                    <label for="email">Email:</label>
-                    <input type="email" class="email_input" required />
+                    <label for="email_address">Email Address:</label>
+                    <input type="email" id="email_address" name="email_address" placeholder="you@example.com" minlength="6" required>
                   </div>
-                  <div id="input_phone_number">
+                  <div id="input_phone">
                     <label for="phone_number">Phone Number:</label>
-                    <input type="tel" minlength="9" name="number_input" required />
+                    <input type="tel" id="phone_number" name="phone_number" minlength="9" maxlength="13">
                   </div>
+                </div>
+                <div class="passwords">
                   <div id="input_password">
-                    <label for="password">
-                      <span>Password:</span>
-                      <strong><span aria-label="required">*</span></strong>
-                    </label>
-                    <input type="password" id="password" name="password" minlength="8" required />
+                    <label for="password"><span>Password:</span><strong><span aria-label="required">*</span></strong></label>
+                    <input type="password" id="password" name="password" minlength="8" required>
                   </div>
-                  <div id="input_confirm_password">
+                  <div id="input_confirm">
                     <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" pattern=".{8,}" title="The passwords do not match." required />
+                    <input type="password" id="confirm_password" name="confirm_password" pattern=".{8,}" title="The passwords do not match." required>
+                  </div>
+                </div>
+                <div id="input_comment">
+                  <p>Would you like to tell us how you learned about us?</p>
+                  <textarea placeholder="How did you hear about us?" maxlength="50"></textarea>  
+                  <p></p>               
+                </div>
+                <button type="submit" id="submit_button">Submit</button>                      
+              </form>
+            </div>
+            <div class="appreciation"><p></p></div>
+        </main>
+    </div>
+</body>
+</html>
 
-                    <h1>Payment form</h1>
+                    <!-- <h1>Payment form</h1>
                     <p>Required fields are followed by <strong><span aria-label="required">*</span></strong></p>
             
                     <section>
@@ -143,16 +160,4 @@
                         <p>
                           <button type="submit">Validate the payment</button>
                         </p>
-                      </section>
-                      
-                      
-            
-                </form>
-            </div>
-            <div class="buttons">
-                <form action="" class="buttons"></form>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
+                      </section> -->

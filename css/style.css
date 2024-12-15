@@ -1,53 +1,110 @@
-* {
+:root {
+    --sidebar-width: 30vw;
+    --dark-grey: #1F2937;
+    --hero: #FFFFFF;
+    --light-grey: #E5E7EB;
+    --medium-grey: #88898c;
+    --lighter-blue: #00AEF0;
+    --medium-blue: #129bf2;
+    --medium-pink: #f77d7a;
+}
+@font-face {
+    font-family: 'introrustg-base2line';
+    src: url('../fonts/introrustg-base2line-webfont.woff2') format('woff2'),
+         url('../fonts/introrustg-base2line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'introheadr-base';
+    src: url('../fonts/introheadr-base-webfont.woff2') format('woff2'),
+         url('../fonts/introheadr-base-webfont.woff') format('woff');
+         /* url('../../testy/fonts/Web\ Fonts/introdeadr_base_macroman/introheadr-base-webfont.woff') format('woff'); */
+    font-weight: normal;
+    font-style: normal;
+}
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
-    outline: 2px solid red;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+html {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'introrustg-base2line', 'introheadr-base', sans-serif, Roboto;
+}
+/* body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+} */
+
+main {
+
+}
+  /* Typography */
+  
+h1 {
+    font-size: 3.2rem;
 }
 
-body {
-    font: 1em sans-serif;
-    /* width: 200px;
-    padding: 0;
-    margin: 0 auto; */
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 0.6rem;
+    line-height: 1.6rem;
+    word-spacing: 0.1rem;
 }
 
 form {
     margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
+}
+input {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-p * {
-    display: block;
+input:invalid {
+    border-color: red;
 }
 
-h1 {
-    margin-top: 0;
+input:valid {
+    border-color: green;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-div + div {
-    margin-top: 1em;
-}
-
-label span {
-    display: inline-block;
-    text-align: right;
+button {
+    width: 120px;
+    height: 46px;
+    border: 5px solid var(--hero);
+    border-radius: 12px;
+    border-style: outset;
+    /* shadow-border: 0 1px 5px 0; */
+    /* padding: 10px 20px; */
+    color: var(--hero);
+    font-size: 24px;
+    font-weight: bold;
+    background-image: linear-gradient(166deg, var(--heroc) 7%, var(--herod) 92%);
+    margin: 8px 0 0 80px;
 }
 
 .container {
+    width: 100vw;
     display: flex;
 }
 
 .sidebar {
-    width: 20vw;
+    width: var(--sidebar-width);
     height: 100vh;
     background-image: url("../img/freepik-graphene3a.jpg");
     background-color: aqua;
@@ -64,17 +121,59 @@ label span {
     font-size: 2rem;
     display: flex;
     flex-flow: row nowrap;
-    /* align-items: center; */
+    align-items: center;
     /* justify-content: space-around; */
+    margin: 0 1vw;
 }
 
-.logo, .icon {
+.logo {
     flex: 1;
 }
 
-.
+.icon {
+    flex: 1;
+}
 
-input#mail {
+.content {
+    height: 100vh;
+    width: calc(100vw - var(--sidebar-width));
+    display: flex;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.calltoaction {
+    flex: 1;
+    background-color: var(--light-grey);
+}
+
+.signupform {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#blank_line {
+    color: var(--hero);
+}
+
+.names, .contacts, .passwords {
+    display: flex;
+}
+
+.appreciation {
+    flex: 1;
+    background-color: var(--light-grey);
+}
+
+#submit_button {
+    color: var(--medium-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* input#mail {
 appearance: none;
 width: 100%;
 border: 1px solid #333;
@@ -84,7 +183,7 @@ font-family: inherit;
 font-size: 90%;
 
 box-sizing: border-box;
-}
+} */
 
 /* invalid fields */
 input#mail.invalid {
@@ -112,9 +211,7 @@ box-sizing: border-box;
 padding: 0.3em;
 }
 
-
-
-input,
+/* input,
 textarea {
 font: 1em sans-serif;
 width: 250px;
@@ -145,9 +242,7 @@ box-sizing: border-box;
 border: 1px solid #999;
 }
 
-button {
-margin: 20px 0 0 0;
-}
+
 
 label {
 display: inline-block;
@@ -155,4 +250,35 @@ display: inline-block;
 
 p label {
 width: 100%;
+} */
+
+/* form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
 }
+
+p * {
+    display: block;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div + div {
+    margin-top: 1em;
+}
+
+label span {
+    display: inline-block;
+    text-align: right;
+} */
