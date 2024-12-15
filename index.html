@@ -22,10 +22,12 @@
         </aside>
         <!-- main.content>div.text(p)+form:post.inputs+form.buttons -->
         <main class="content">
-            <div class="calltoaction"><p></p></div>
+            <div class="calltoaction">
+              <p>Call to action!</p>
+            </div>
             <div class="signupform">
               <form action="https://httpbin.org/post" class="form" id="sign_up" method="post">
-                <h3>Create your account.</h3>
+                <h3>Shall we create your account?</h3>
                 <p id="blank_line">space</p>
                 <div class="names">
                   <div id="input_first">
@@ -58,14 +60,16 @@
                   </div>
                 </div>
                 <div id="input_comment">
-                  <p>Would you like to tell us how you learned about us?</p>
-                  <textarea placeholder="How did you hear about us?" maxlength="50"></textarea>  
+                  <p>Would you like to share?</p>
+                  <textarea id="feedback_comment" placeholder="How did you hear about us?" maxlength="50"></textarea>  
                   <p></p>               
                 </div>
                 <button type="submit" id="submit_button">Submit</button>                      
               </form>
             </div>
-            <div class="appreciation"><p></p></div>
+            <div class="appreciation">
+              <p>Already have an account? <a href="./login.html" alternate="login webpage">Log in</a></p>
+            </div>
         </main>
     </div>
 </body>

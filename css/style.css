@@ -60,9 +60,14 @@ h3 {
 }
 
 p {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     line-height: 1.6rem;
     word-spacing: 0.1rem;
+    margin: 10px 0;
+}
+
+a {
+    padding: 10px;
 }
 
 form {
@@ -84,7 +89,7 @@ input:valid {
 }
 
 button {
-    width: 120px;
+    width: 200px;
     height: 46px;
     border: 5px solid var(--hero);
     border-radius: 12px;
@@ -95,7 +100,7 @@ button {
     font-size: 24px;
     font-weight: bold;
     background-image: linear-gradient(166deg, var(--heroc) 7%, var(--herod) 92%);
-    margin: 8px 0 0 80px;
+    margin: 8px 0 0 20px;
 }
 
 .container {
@@ -143,15 +148,19 @@ button {
     justify-content: center;
 }
 
-.calltoaction {
+.calltoaction, .appreciation {
     flex: 1;
     background-color: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .signupform {
     flex: 1;
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 #blank_line {
@@ -160,11 +169,7 @@ button {
 
 .names, .contacts, .passwords {
     display: flex;
-}
-
-.appreciation {
-    flex: 1;
-    background-color: var(--light-grey);
+    justify-content: space-between;
 }
 
 #submit_button {
@@ -173,7 +178,7 @@ button {
     text-decoration: none;
 }
 
-/* input#mail {
+/* input#email_address {
 appearance: none;
 width: 100%;
 border: 1px solid #333;
@@ -183,10 +188,10 @@ font-family: inherit;
 font-size: 90%;
 
 box-sizing: border-box;
-} */
+}  */
 
 /* invalid fields */
-input#mail.invalid {
+input#email_address.invalid {
 border-color: #900;
 background-color: #fdd;
 }
@@ -211,7 +216,7 @@ box-sizing: border-box;
 padding: 0.3em;
 }
 
-/* input,
+input,
 textarea {
 font: 1em sans-serif;
 width: 250px;
@@ -242,7 +247,9 @@ box-sizing: border-box;
 border: 1px solid #999;
 }
 
-
+#feedback_comment {
+    width: 600px;
+}
 
 label {
 display: inline-block;
